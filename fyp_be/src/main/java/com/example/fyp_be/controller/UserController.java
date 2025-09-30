@@ -42,18 +42,12 @@ public class UserController {
     public ResponseEntity<?> login(@RequestBody LoginUserRequest loginRequest) {
         Optional<User> optionalUser = userService.loginUser(loginRequest);
         if (optionalUser.isPresent()) {
-//            return ResponseEntity.ok(Map.of(
-//                    "message", "Login successful",
-//                    "user", optionalUser.get()
-//            ));
             Map<String, Object> response = new HashMap<>();
             response.put("message", "Login successful");
 
-            // CRITICAL: Put the actual User object in the map
+            // Put the actual User object in the map
             response.put("user", optionalUser.get());
 
-            // Now the backend will send the complete JSON:
-            // { "message": "Login successful", "user": { "id": 1, ... } }
             return ResponseEntity.ok(response);
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("message", "Invalid identifier, password, or role"));

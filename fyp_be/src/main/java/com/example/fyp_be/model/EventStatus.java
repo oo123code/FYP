@@ -18,14 +18,14 @@ public enum EventStatus {
         this.code = code;
     }
     @JsonValue  // Added this annotation to use the code for serialization
-    public String getCodeForSerialization() {
+    public String forSerialization() {
         return this.name();
     }
 
     @JsonCreator
     public static EventStatus fromCode(String code) {
         for (EventStatus status : EventStatus.values()) {
-            if (status.getCode().equalsIgnoreCase(code)) {
+            if (status.getCode().equalsIgnoreCase(code) || status.name().equalsIgnoreCase(code)) {
                 return status;
             }
         }

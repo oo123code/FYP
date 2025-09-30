@@ -5,11 +5,13 @@ import com.example.fyp_be.model.RegisterUserRequest;
 import com.example.fyp_be.model.UpdateUserRequest;
 import com.example.fyp_be.model.User;
 import com.example.fyp_be.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Transactional
 @Service
 public class UserService {
     @Autowired
