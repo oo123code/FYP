@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Inavitable</string>
+
+
+    <string name="grant_permissions_to_app">Grant required permissions for app to work</string>">
+    <string name="grant_permissions">Grant Permissions</string>
+
+</resources>
