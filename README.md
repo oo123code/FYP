@@ -6,7 +6,7 @@ This repository contains the source code for a mobile-based event location servi
 
 This project is a mobile application designed to provide users with an easy way to discover, locate, and get information about events happening around them.
 
-This project was submitted in fulfillment of the requirements for the course **UECS 3599 Project (Final Year Project)** June 2025 trimester.
+This project was submitted in fulfillment of the requirements for the course **UECS 3599 Project (Final Year Project)** in June 2025 trimester of Universiti Tunku Abdul Rahman (UTAR).
 
 ---
 
